@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="container">
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #333', paddingBottom: '15px' }}>
-        <h2>Instagram Cloud App</h2>
+        <h2>Altair</h2>
         <div>
           <span>Hola, <strong>{usuario?.nombre}</strong></span>
           <button onClick={handleLogout} style={{ marginLeft: '15px', padding: '8px 12px', background: '#e53935', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
@@ -90,7 +90,7 @@ function App() {
       <main>
         <h3>Galería de Fotografías</h3>
         <div className="grid-photos">
-          {fotografias.map((foto) => (
+          {Array. isArray(fotos) && fotos.map((foto) => (
             <div key={foto.id} className="card-photo" onClick={() => setFotoSeleccionada(foto.id)}>
               <img src={foto.url_miniatura || foto.url_original} alt="Miniatura" />
               <div style={{ padding: '10px' }}>
